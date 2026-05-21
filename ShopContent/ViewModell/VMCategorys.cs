@@ -6,14 +6,15 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using ShopContent.Modell;
 
 namespace ShopContent.ViewModell
 {
     public class VMCategorys : INotifyPropertyChanged
     {
-        public ObservableCollection<Context.CategorysContext> Categorys { get; set; }
+        public ObservableCollection<Context.CategorysContext> Categories { get; set; }
         public VMCategorys() =>
-            Categorys = Context.CategorysContext.AllCategorys();
+            Categories = Context.CategorysContext.AllCategorys();
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {

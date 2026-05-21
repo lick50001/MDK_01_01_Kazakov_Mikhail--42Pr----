@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using ShopContent.Classes;
 
 namespace ShopContent.Context
@@ -14,8 +15,8 @@ namespace ShopContent.Context
         public static ObservableCollection<CategorysContext> AllCategorys()
         {
             ObservableCollection<CategorysContext> allCategorys = new ObservableCollection<CategorysContext>();
-            SqlConnection conn;
-            SqlDataReader dataCategorys = Connection.Query("SELECT * FROM [dbo].[Categorys]", out conn);
+            MySqlConnection conn;
+            MySqlDataReader dataCategorys = Connection.Query("SELECT * FROM Categorys", out conn);
             while (dataCategorys.Read())
             {
                 allCategorys.Add(new CategorysContext()

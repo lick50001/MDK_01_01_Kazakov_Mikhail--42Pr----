@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ShopContent.View"
-      d:DesignHeight="450" d:DesignWidth="800"
-Title="Add"
-Margin="10"
-FontFamily="Century Gothic">
+      mc:Ignorable="d"
+      Title="Add"
+      Margin="10"
+      FontFamily="Century Gothic">
     <Page.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#FF4FC318" />
@@ -19,7 +19,6 @@ FontFamily="Century Gothic">
         <Grid.Effect>
             <DropShadowEffect Direction="270" BlurRadius="5" ShadowDepth="2" Opacity="0.5" />
         </Grid.Effect>
-        <Image Width="50" Height="50" Source="/Images/ic_item.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"/>
         <Grid Margin="65,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -30,12 +29,11 @@ FontFamily="Century Gothic">
             <Label Content="Стоимость:" VerticalAlignment="Top" Margin="10,10,10,0" Grid.Column="1"/>
             <TextBox Text="{Binding item.Price}" Height="25" VerticalAlignment="Top" Margin="10,37,10,0" VerticalContentAlignment="Center" Grid.Column="1"/>
             <Label Content="Категория:" VerticalAlignment="Top" Margin="10,67,10,0" Grid.ColumnSpan="2"/>
-            <ComboBox x:Name="cbCategory"
-ItemsSource="{Binding categories.Categories}"
-DisplayMemberPath="Name"
-SelectedValue="{Binding item.CategoryId}"
-SelectedValuePath="Id"
-Height="25" VerticalAlignment="Top" Margin="10,93,10,0" VerticalContentAlignment="Center" Grid.ColumnSpan="2" />
+            <ComboBox ItemsSource="{Binding categories.Categories}"
+              DisplayMemberPath="Name"
+              SelectedValue="{Binding item.Category.Id}"
+              SelectedValuePath="Id"
+              Height="25" VerticalAlignment="Top" Margin="10,93,10,0" VerticalContentAlignment="Center" Grid.ColumnSpan="2" />
             <Label Content="Описание:" VerticalAlignment="Top" Margin="10,123,10,0" Grid.ColumnSpan="2"/>
             <TextBox Text="{Binding item.Description}" Margin="10,150,10,40" Grid.ColumnSpan="2" TextWrapping="Wrap"/>
             <Button Content="Сохранить" Width="100" Height="25" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1" Command="{Binding item.OnSave}">

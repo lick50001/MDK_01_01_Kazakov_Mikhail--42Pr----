@@ -62,7 +62,7 @@ namespace ShopContent.Modell
         public void OnPropertyChanged([CallerMemberName] string prop="")
         {
             if (PropertyChanged != null)
-                ProperyChanged(this, new PropertyChangedEventArgs(prop));
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
     }
 }
