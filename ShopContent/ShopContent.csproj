@@ -64,6 +64,8 @@
     <Compile Include="Context\ItemsContext.cs" />
     <Compile Include="Modell\Categorys.cs" />
     <Compile Include="Modell\Items.cs" />
+    <Compile Include="ViewModell\VMCategorys.cs" />
+    <Compile Include="ViewModell\VMItems.cs" />
     <Compile Include="View\Items\Item.xaml.cs">
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
@@ -120,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="ViewModell\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
