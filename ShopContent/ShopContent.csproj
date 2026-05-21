@@ -60,6 +60,7 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\RelayCommand.cs" />
+    <Compile Include="Modell\Categorys.cs" />
     <Compile Include="Modell\Items.cs" />
     <Compile Include="View\Items\Item.xaml.cs">
       <DependentUpon>Item.xaml</DependentUpon>
