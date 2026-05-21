@@ -60,6 +60,8 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\RelayCommand.cs" />
+    <Compile Include="Context\CategorysContext.cs" />
+    <Compile Include="Context\ItemsContext.cs" />
     <Compile Include="Modell\Categorys.cs" />
     <Compile Include="Modell\Items.cs" />
     <Compile Include="View\Items\Item.xaml.cs">
@@ -117,7 +119,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Images\" />
     <Folder Include="ViewModell\" />
   </ItemGroup>
